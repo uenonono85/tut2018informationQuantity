@@ -46,7 +46,22 @@ public class TestCase {
 	catch(Exception e) {
 	    System.out.println("Exception occurred: STOP");
 	}*/
-    try { //出現回数が正しいかテスト1(H)
+    try { //出現回数が正しいかテスト0(W)
+        FrequencerInterface  myObject;
+        int freq;
+        System.out.println("CASE0 : checking Frequencer(出現回数カウント)");
+        myObject = new s4.B183312.Frequencer();
+        myObject.setSpace("hoge".getBytes());
+        myObject.setTarget("hogefuga".getBytes());
+        freq = myObject.frequency();
+        System.out.println("\"hogefuga\" in \"hoge\" appears "+freq+" times.");
+        if(0 == freq) { System.out.println("OK"); } else {System.out.println("WRONG"); }
+    }
+    catch(Exception e) {
+        e.printStackTrace();
+        System.out.println("Exception occurred: STOP");
+    }
+    try { //出現回数が正しいかテスト1(W)
         FrequencerInterface  myObject;
         int freq;
         System.out.println("CASE1 : checking Frequencer(出現回数カウント)");
@@ -61,7 +76,7 @@ public class TestCase {
         e.printStackTrace();
         System.out.println("Exception occurred: STOP");
     }
-    try { //出現回数が正しいかテスト2(H)
+    try { //出現回数が正しいかテスト2(W)
         FrequencerInterface  myObject;
         int freq;
         System.out.println("CASE2 : checking Frequencer(出現回数カウント)");
